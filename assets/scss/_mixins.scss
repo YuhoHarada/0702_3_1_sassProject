@@ -1,0 +1,41 @@
+@mixin flexdisp($ff:null,$jc:null,$ai:null) {
+    display: flex;
+    @if $ff != null{
+        flex-flow: $ff;
+    }
+    @if $jc != null{
+        justify-content: $jc;
+    }
+    @if $ai != null{
+        align-items: $ai;
+    }
+}
+
+@mixin circle($sz) {
+    height: $sz;
+    width: $sz;
+    border-radius: 50%;
+}
+
+@mixin pos-absolute($top:null,$right:null,$bottom:null,$left:null) {
+    position: absolute;
+    @if $top != null{
+        top: $top;
+    }
+    @if $right != null{
+        right: $right;
+    }
+    @if $bottom != null{
+        bottom: $bottom;
+    }
+    @if $left != null{
+        left: $left;
+    }
+}
+
+@mixin anchor-first($clr) {
+    display: inline-block;
+    color: $clr;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
